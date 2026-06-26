@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Студия развития тела Олимпия — Барнаул</title>
+<meta name="description" content="Женская студия в Барнауле. 18 направлений: фитнес, растяжка, гамаки, танцы, медитация. Запись онлайн." />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Студия развития тела Олимпия — Барнаул" />
+<meta property="og:description" content="Женская студия в Барнауле. 18 направлений: фитнес, растяжка, гамаки, танцы, медитация. Запись онлайн." />
+<meta property="og:image" content="images/og-image.jpg" />
+<meta property="og:locale" content="ru_RU" />
+
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg" />
+<link rel="apple-touch-icon" href="images/favicon.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'olympia-dark':   '#0f2419',
+          'olympia-green':  '#1a3a2e',
+          'olympia-olive':  '#3a5a44',
+          'olympia-gold':   '#c9a961',
+          'olympia-gold-light': '#d4b97a',
+          'olympia-cream':  '#f0e6d2',
+          'olympia-beige':  '#e8dcc4',
+        },
+        fontFamily: {
+          serif: ['"Cormorant Garamond"', 'serif'],
+          sans:  ['Manrope', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-olympia-dark text-olympia-cream font-sans antialiased">
+
+<!-- ============== ШАПКА ============== -->
+<header id="top" class="fixed top-0 left-0 right-0 z-40 bg-olympia-dark/85 backdrop-blur border-b border-olympia-gold/20">
+  <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="images/logo/olympia-cyrillic-ornament.jpg" alt="Олимпия" class="logo-blend h-10 w-10 object-contain" />
+      <span class="font-serif text-xl text-olympia-gold tracking-wider">OLYMPIA</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider text-olympia-cream/80">
+      <a href="#about"     class="hover:text-olympia-gold transition">О студии</a>
+      <a href="#programs"  class="hover:text-olympia-gold transition">Направления</a>
+      <a href="#schedule"  class="hover:text-olympia-gold transition">Расписание</a>
+      <a href="#prices"    class="hover:text-olympia-gold transition">Цены</a>
+      <a href="#gallery"   class="hover:text-olympia-gold transition">Галерея</a>
+      <a href="#contacts"  class="hover:text-olympia-gold transition">Контакты</a>
+    </nav>
+
+    <a href="https://n564509.yclients.com/" target="_blank" rel="noopener"
+       class="hidden md:inline-block btn-gold text-sm">Записаться</a>
+
+    <button id="menu-toggle" aria-label="Меню" class="lg:hidden text-olympia-gold p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- мобильное меню -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-olympia-gold/20 bg-olympia-dark">
+    <nav class="flex flex-col px-5 py-4 gap-4 text-olympia-cream uppercase tracking-wider text-sm">
+      <a href="#about">О студии</a>
+      <a href="#programs">Направления</a>
+      <a href="#schedule">Расписание</a>
+      <a href="#prices">Цены</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+      <a href="https://n564509.yclients.com/" target="_blank" rel="noopener" class="btn-gold text-center mt-2">Записаться</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============== HERO ============== -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <div class="absolute inset-0">
+    <img src="images/photos/12-stretch-plastic.jpg" alt="" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-olympia-dark/85 via-olympia-dark/75 to-olympia-dark"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
+    <img src="images/logo/olympia-cyrillic-ornament.jpg" alt="Логотип Олимпия" class="logo-blend mx-auto w-40 h-40 md:w-52 md:h-52 object-contain mb-6" />
+
+    <div class="meander-divider mx-auto mb-6"></div>
+
+    <h1 class="font-serif text-4xl md:text-6xl text-olympia-cream mb-3 leading-tight">
+      Студия развития тела<br/>
+      <span class="text-olympia-gold">«Олимпия»</span>
+    </h1>
+
+    <p class="font-serif italic text-xl md:text-2xl text-olympia-gold-light mb-2">Единство разума и тела</p>
+    <p class="text-base md:text-lg text-olympia-cream/85 mb-8 tracking-wide">Женский храм здоровья в Барнауле</p>
+
+    <p class="max-w-2xl mx-auto text-olympia-cream/80 mb-10 leading-relaxed">
+      18 направлений для женщин 35+. Здоровье позвоночника, гибкость, фигура, женственность.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="https://n564509.yclients.com/" target="_blank" rel="noopener" class="btn-gold btn-lg">
+        Записаться на пробное за 300 ₽
+      </a>
+      <a href="tel:+79231647578" class="btn-outline btn-lg">
+        Позвонить
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== О СТУДИИ ============== -->
+<section id="about" class="relative py-16 md:py-20 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/photos/01-couple-stretch-clock.jpg" alt="" class="w-full h-full object-cover opacity-40 parallax-bg" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-b from-olympia-dark/85 via-olympia-dark/70 to-olympia-dark/85"></div>
+  </div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="meander-divider mx-auto mb-5"></div>
+    <h2 class="font-serif text-3xl md:text-4xl text-olympia-gold mb-5 leading-tight">
+      Особая концепция и уникальные комплексы упражнений
+    </h2>
+    <p class="text-base md:text-lg leading-relaxed text-olympia-cream/95 mb-3">
+      «Олимпия» — это не обычный фитнес-клуб, а пространство для женщин, где одинаково важны и результат, и состояние.
+    </p>
+    <p class="text-base md:text-lg leading-relaxed text-olympia-cream/95">
+      Здесь мы работаем через дыхание, осанку и женскую энергию. Каждое направление продумано так, чтобы тело становилось сильнее, мягче и свободнее, а внутри рождалась тишина.
+    </p>
+  </div>
+</section>
+
+<!-- ============== НАПРАВЛЕНИЯ ============== -->
+<section id="programs" class="relative py-24 bg-olympia-green overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/photos/16-hammocks-interior.jpg" alt="" class="w-full h-full object-cover opacity-30 parallax-bg" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-b from-olympia-green/85 via-olympia-green/80 to-olympia-green/90"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5">
+    <div class="text-center mb-16 reveal">
+      <p class="text-olympia-gold uppercase tracking-[0.3em] text-sm mb-4">направления</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-olympia-cream mb-4">18 направлений в студии</h2>
+      <p class="text-olympia-cream/70 text-lg italic font-serif">Выбери, что подходит именно тебе</p>
+    </div>
+
+    <!-- Группа 1 -->
+    <h3 class="program-group reveal">Силовые и общая физподготовка</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 reveal-stagger">
+      <article class="program-card">
+        <img src="images/photos/01-couple-stretch-clock.jpg" alt="Подкачка + растяжка" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Подкачка + растяжка</h4>
+          <p>Первые полчаса — интенсивная силовая нагрузка на все группы мышц. Вторые полчаса — классическая растяжка с проработкой всего тела.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/04-pilates-rings.jpg" alt="Пилатес" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Пилатес</h4>
+          <p>Медленный темп, особая техника дыхания, работа с мышцами брюшной полости и тазового дна. Без увеличения частоты пульса.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/04-pilates-rings.jpg" alt="Функциональные петли TRX" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Функциональные петли TRX</h4>
+          <p>Интенсивная силовая нагрузка на все группы мышц с подвесными петлями. Тренировка сердечно-сосудистой системы.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/05-latina-dance.jpg" alt="Степ-аэробика" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Степ-аэробика</h4>
+          <p>Часовая кардионагрузка на степ-платформах. Связки шагов под ритмичную музыку. Эффективна при жиросжигании.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Группа 2 -->
+    <h3 class="program-group reveal">Растяжка и гибкость</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 reveal-stagger">
+      <article class="program-card">
+        <img src="images/photos/14-classic-stretch.jpg" alt="Классическая растяжка" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Классическая растяжка</h4>
+          <p>Полчаса — верхняя часть тела: плечевой пояс, позвоночник, боковые линии. Полчаса — нижняя: поясница, ноги, связки. К финалу — работа над шпагатом.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/02-paired-stretch.jpg" alt="Растяжка в парах" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Растяжка в парах</h4>
+          <p>Та же классическая растяжка, но через парное взаимодействие — глубокая проработка благодаря помощи партнёрши. Час занятия.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/07-hammocks-group.jpg" alt="Растяжка в гамаках" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Растяжка в гамаках</h4>
+          <p>Часовая работа с гамаком-полотном. Оздоровление позвоночника через вытяжение, гибкость, работа с вестибулярным аппаратом. Несложные акробатические элементы.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/09-stretch-bands.jpg" alt="МФР" loading="lazy" />
+        <div class="program-card-body">
+          <h4>МФР (миофасциальный релиз)</h4>
+          <p>Самомассаж с фоам-роллами, теннисными мячами и «попрыгунчиками». Снимает нервно-мышечные спазмы, стимулирует кровоток и лимфоток.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/12-stretch-plastic.jpg" alt="Стрейчпластика" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Стрейчпластика</h4>
+          <p>Танцевальное направление. Связки в партере и стоя. Раскрытие женственности и уверенности в теле.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Группа 3 -->
+    <h3 class="program-group reveal">Здоровье</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 reveal-stagger">
+      <article class="program-card">
+        <img src="images/photos/17-stick-pose-clock.jpg" alt="Здоровая спина" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Здоровая спина</h4>
+          <p>Комплекс на улучшение осанки: подвижность плечевых суставов, проработка всех сегментов позвоночника, работа с нижней частью тела.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/18-art-glass-woman.jpg" alt="Женское здоровье" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Женское здоровье</h4>
+          <p>Спокойное мягкое направление. Работа с мышцами тазового дна и брюшной полости, специальные техники дыхания.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/03-bridge-pose.jpg" alt="Фитнес для беременных" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Фитнес для беременных</h4>
+          <p>Специальный комплекс для женщин в первом и втором триместре. Мягкие упражнения на тазовое дно, дыхательные техники.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/14-classic-stretch.jpg" alt="Послеродовое восстановление" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Послеродовое восстановление</h4>
+          <p>Авторские комплексы для восстановления женского здоровья после родов.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Группа 4 -->
+    <h3 class="program-group reveal">Медитация и расслабление</h3>
+    <div class="grid sm:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto reveal-stagger">
+      <article class="program-card">
+        <img src="images/photos/11-hammocks-window.jpg" alt="Медитация в гамаках" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Медитация в гамаках</h4>
+          <p>Час в гамаке под расслабляющую музыку с аффирмациями. Перезагрузка нервной системы, выход из суеты и забот.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/20-art-meditation.jpg" alt="Медитация Звуколад" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Медитация «Звуколад»</h4>
+          <p>Работа с подсознанием через звуковую волну авторского инструмента «Звуколад». В дополнение — комплексы из кундалини-йоги.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Группа 5 -->
+    <h3 class="program-group reveal">Танцевальные направления</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+      <article class="program-card">
+        <img src="images/photos/15-latina-stage.jpg" alt="Латина" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Латина</h4>
+          <p>Чувственный танец. Раскрывает грацию и женственную энергию.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/08-pole-dance.jpg" alt="Pole Dance" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Pole Dance</h4>
+          <p>Силовое танцевальное направление на пилоне. Акробатические элементы, развитие женственности.</p>
+        </div>
+      </article>
+
+      <article class="program-card">
+        <img src="images/photos/19-art-eastern-dance.jpg" alt="Восточный танец" loading="lazy" />
+        <div class="program-card-body">
+          <h4>Восточный танец</h4>
+          <p>Чувственное танцевальное направление. Раскрытие женской энергии, улучшение настроения.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== РАСПИСАНИЕ ============== -->
+<section id="schedule" class="relative py-24 bg-olympia-dark overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/photos/01-couple-stretch-clock.jpg" alt="" class="w-full h-full object-cover opacity-50 parallax-bg" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-r from-olympia-dark/90 via-olympia-dark/70 to-olympia-dark/90"></div>
+  </div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="meander-divider mx-auto mb-8"></div>
+    <h2 class="font-serif text-4xl md:text-5xl text-olympia-gold mb-6">Расписание и запись онлайн</h2>
+    <p class="text-lg text-olympia-cream/85 mb-10 leading-relaxed">
+      Выбери удобное время, направление и тренера. Запись подтвердится сразу.
+    </p>
+    <a href="https://n564509.yclients.com/" target="_blank" rel="noopener" class="btn-gold btn-lg">
+      Открыть расписание и записаться
+    </a>
+  </div>
+</section>
+
+<!-- ============== ЦЕНЫ ============== -->
+<section id="prices" class="relative py-24 bg-olympia-green overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/photos/13-pilates-sticks.jpg" alt="" class="w-full h-full object-cover opacity-30 parallax-bg" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-b from-olympia-green/85 via-olympia-green/75 to-olympia-green/90"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-5">
+    <div class="text-center mb-14 reveal">
+      <p class="text-olympia-gold uppercase tracking-[0.3em] text-sm mb-4">прайс-лист</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-olympia-cream">Цены</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 mb-12 reveal-stagger">
+      <!-- Абонементы -->
+      <div class="price-table">
+        <h3 class="font-serif text-2xl text-olympia-gold mb-6 text-center">Абонементы (групповые)</h3>
+        <table class="w-full">
+          <thead>
+            <tr class="text-olympia-gold/80 text-sm uppercase tracking-wider border-b border-olympia-gold/30">
+              <th class="py-3 text-left">Абонемент</th>
+              <th class="py-3 text-center">Срок</th>
+              <th class="py-3 text-right">Цена</th>
+            </tr>
+          </thead>
+          <tbody class="text-olympia-cream">
+            <tr><td class="py-3">10 занятий</td><td class="text-center">1 месяц</td><td class="text-right font-semibold">4 000 ₽</td></tr>
+            <tr><td class="py-3">Безлимит</td><td class="text-center">1 месяц</td><td class="text-right font-semibold">6 000 ₽</td></tr>
+            <tr><td class="py-3">14 занятий</td><td class="text-center">3 месяца</td><td class="text-right font-semibold">7 000 ₽</td></tr>
+            <tr><td class="py-3">26 занятий</td><td class="text-center">6 месяцев</td><td class="text-right font-semibold">10 000 ₽</td></tr>
+            <tr><td class="py-3">36 занятий</td><td class="text-center">6 месяцев</td><td class="text-right font-semibold">12 000 ₽</td></tr>
+            <tr><td class="py-3">96 занятий</td><td class="text-center">1 год</td><td class="text-right font-semibold">28 800 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Разовые -->
+      <div class="price-table">
+        <h3 class="font-serif text-2xl text-olympia-gold mb-6 text-center">Разовые и персональные</h3>
+        <table class="w-full">
+          <thead>
+            <tr class="text-olympia-gold/80 text-sm uppercase tracking-wider border-b border-olympia-gold/30">
+              <th class="py-3 text-left">Услуга</th>
+              <th class="py-3 text-right">Цена</th>
+            </tr>
+          </thead>
+          <tbody class="text-olympia-cream">
+            <tr><td class="py-3">Пробное групповое занятие</td><td class="text-right font-semibold text-olympia-gold-light">300 ₽</td></tr>
+            <tr><td class="py-3">Разовое групповое занятие</td><td class="text-right font-semibold">700 ₽</td></tr>
+            <tr><td class="py-3">Разовое персональное занятие</td><td class="text-right font-semibold">1 500 ₽</td></tr>
+            <tr><td class="py-3">8 персональных занятий</td><td class="text-right font-semibold">9 600 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="https://n564509.yclients.com/" target="_blank" rel="noopener" class="btn-gold btn-lg">
+        Записаться на пробное за 300 ₽
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ГАЛЕРЕЯ ============== -->
+<section id="gallery" class="relative py-24 bg-olympia-dark overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/photos/16-hammocks-interior.jpg" alt="" class="w-full h-full object-cover opacity-25 parallax-bg" loading="lazy" />
+    <div class="absolute inset-0 bg-olympia-dark/80"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5">
+    <div class="text-center mb-12 reveal">
+      <p class="text-olympia-gold uppercase tracking-[0.3em] text-sm mb-4">галерея</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-olympia-cream">Атмосфера студии</h2>
+      <div class="meander-divider mx-auto mt-6"></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 reveal-stagger">
+      <button class="gallery-item" data-src="images/photos/12-stretch-plastic.jpg"><img src="images/photos/12-stretch-plastic.jpg" alt="Стрейчпластика" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/15-latina-stage.jpg"><img src="images/photos/15-latina-stage.jpg" alt="Латина — сцена" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/08-pole-dance.jpg"><img src="images/photos/08-pole-dance.jpg" alt="Pole Dance" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/01-couple-stretch-clock.jpg"><img src="images/photos/01-couple-stretch-clock.jpg" alt="Парная растяжка" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/16-hammocks-interior.jpg"><img src="images/photos/16-hammocks-interior.jpg" alt="Зал с гамаками" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/06-hammocks-orange.jpg"><img src="images/photos/06-hammocks-orange.jpg" alt="Гамаки" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/07-hammocks-group.jpg"><img src="images/photos/07-hammocks-group.jpg" alt="Аэро-растяжка" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/17-stick-pose-clock.jpg"><img src="images/photos/17-stick-pose-clock.jpg" alt="Пилатес со снарядами" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/14-classic-stretch.jpg"><img src="images/photos/14-classic-stretch.jpg" alt="Классическая растяжка" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/04-pilates-rings.jpg"><img src="images/photos/04-pilates-rings.jpg" alt="Пилатес" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/05-latina-dance.jpg"><img src="images/photos/05-latina-dance.jpg" alt="Танцы" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/02-paired-stretch.jpg"><img src="images/photos/02-paired-stretch.jpg" alt="Парная растяжка" loading="lazy" /></button>
+    </div>
+  </div>
+
+  <!-- lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4">
+    <button id="lightbox-close" aria-label="Закрыть" class="absolute top-5 right-5 text-olympia-cream/80 hover:text-olympia-gold text-4xl leading-none">&times;</button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl" />
+  </div>
+</section>
+
+<!-- ============== КОНТАКТЫ ============== -->
+<section id="contacts" class="relative py-24 bg-olympia-green overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="images/photos/04-pilates-rings.jpg" alt="" class="w-full h-full object-cover opacity-30 parallax-bg" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-t from-olympia-green/90 via-olympia-green/80 to-olympia-green/75"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-5">
+    <div class="text-center mb-12 reveal">
+      <p class="text-olympia-gold uppercase tracking-[0.3em] text-sm mb-4">контакты</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-olympia-cream">Как нас найти</h2>
+      <div class="meander-divider mx-auto mt-6"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start reveal-stagger">
+      <div class="space-y-6">
+        <div>
+          <p class="text-olympia-gold uppercase tracking-wider text-sm mb-2">Адрес</p>
+          <p class="text-xl text-olympia-cream">г. Барнаул, ул. Антона Петрова, 221Г/3</p>
+        </div>
+
+        <div>
+          <p class="text-olympia-gold uppercase tracking-wider text-sm mb-2">Телефоны</p>
+          <p><a href="tel:+79231647578" class="text-xl text-olympia-cream hover:text-olympia-gold transition">+7 923 164 75 78</a></p>
+          <p><a href="tel:+79236597674" class="text-xl text-olympia-cream hover:text-olympia-gold transition">+7 923 659 76 74</a></p>
+        </div>
+
+        <div class="pt-4">
+          <a href="https://n564509.yclients.com/" target="_blank" rel="noopener" class="btn-gold btn-lg">Записаться онлайн</a>
+        </div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden ring-1 ring-olympia-gold/30 shadow-2xl bg-olympia-dark/50">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=83.7100%2C53.3506&z=15&text=%D0%91%D0%B0%D1%80%D0%BD%D0%B0%D1%83%D0%BB%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B0%20%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B0%2C%20221%D0%93%2F3"
+          width="100%" height="400" frameborder="0" allowfullscreen="true"
+          title="Студия Олимпия на карте Барнаула"
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="bg-olympia-dark border-t border-olympia-gold/20 py-12">
+  <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center md:items-start justify-between gap-8 text-center md:text-left">
+    <div class="flex items-center gap-4">
+      <img src="images/logo/olympia-cyrillic-ornament.jpg" alt="Олимпия" class="logo-blend h-16 w-16 object-contain" />
+      <div>
+        <p class="font-serif text-xl text-olympia-gold tracking-wider">OLYMPIA</p>
+        <p class="text-olympia-cream/60 text-xs uppercase tracking-wider">студия развития тела</p>
+      </div>
+    </div>
+
+    <div class="text-olympia-cream/70 text-sm space-y-1">
+      <p>г. Барнаул, ул. Антона Петрова, 221Г/3</p>
+      <p>
+        <a href="tel:+79231647578" class="hover:text-olympia-gold">+7 923 164 75 78</a> ·
+        <a href="tel:+79236597674" class="hover:text-olympia-gold">+7 923 659 76 74</a>
+      </p>
+      <p class="text-olympia-cream/50 mt-3">© 2026 Студия развития тела «Олимпия»</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

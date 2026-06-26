@@ -1,0 +1,18 @@
+# Временные скриншоты-превью
+_*.png
+_*.html
+_*.js
+
+# Системный мусор Windows / macOS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Node (если когда-нибудь поставим зависимости)
+node_modules/
+package-lock.json
+package.json
+
+# IDE
+.vscode/
+.idea/
