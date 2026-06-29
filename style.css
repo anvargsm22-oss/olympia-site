@@ -15,6 +15,9 @@
 }
 
 html { scroll-behavior: smooth; }
+/* Защита от горизонтальной прокрутки на мобильных (фоновые слои/лого
+   не должны «расталкивать» страницу за край вьюпорта). */
+html, body { overflow-x: hidden; max-width: 100%; }
 body { font-feature-settings: "kern", "liga"; }
 
 /* === Меандр-разделитель ===
@@ -181,17 +184,71 @@ body { font-feature-settings: "kern", "liga"; }
   .program-card img { height: 180px; }
   .price-table { padding: 1.25rem; }
   .price-table th, .price-table td { font-size: 0.9rem; }
+
+  /* На телефоне призрачный лого крупнее по доле экрана и чуть заметнее,
+     чтобы он действительно «виднелся в увеличенном виде». */
+  .hero-ghost-logo { width: 135vw; opacity: 0.18; }
+  @keyframes ghost-breathe {
+    0%, 100% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
+    50%      { opacity: 0.22; transform: translate(-50%, -50%) scale(1.03); }
+  }
+
+  /* Заголовок hero на узких экранах был великоват и упирался в края —
+     уменьшаем кегль и страхуемся переносом, чтобы текст не вылезал за вьюпорт. */
+  #hero h1 { font-size: 2rem; line-height: 1.15; }
+  #hero { overflow-x: hidden; }
+  #hero h1, #hero p { overflow-wrap: anywhere; }
 }
 
 /* === Корректировка прокрутки по якорю под фиксированную шапку === */
 section[id] { scroll-margin-top: 70px; }
 
-/* === Лого «Олимпия» — белый фон убирается через blend-mode ===
-   Картинка-исходник на белом фоне; на тёмно-зелёном через mix-blend-mode:lighten
-   белый становится прозрачным, остаётся только золотой меандр. */
-.logo-blend {
-  mix-blend-mode: lighten;
-  background: transparent;
+/* === Лого «Олимпия» ===
+   Используется PNG с прозрачным фоном (olympia-transparent.png) — белый фон
+   исходника убран заранее, поэтому никаких blend-трюков не нужно. Лого
+   корректно выглядит на любом фоне и на любом устройстве, включая мобильные. */
+
+/* === HERO: насыщенный фон ===
+   Раньше фото было перекрыто почти сплошным тёмным градиентом и выглядело блёкло.
+   Теперь градиент мягче и с зелёным подтоном — фон стал глубже и насыщеннее,
+   но текст по-прежнему читается. */
+.hero-overlay {
+  background:
+    radial-gradient(120% 90% at 50% 35%,
+      rgba(15, 36, 25, 0.42) 0%,
+      rgba(15, 36, 25, 0.66) 55%,
+      rgba(15, 36, 25, 0.92) 100%),
+    linear-gradient(to bottom,
+      rgba(26, 58, 46, 0.30) 0%,
+      rgba(15, 36, 25, 0.52) 60%,
+      var(--olympia-dark) 100%);
+}
+
+/* === HERO: призрачный увеличенный логотип позади контента ===
+   Полупрозрачный «водяной знак» — крупная версия лого по центру секции.
+   PNG уже прозрачный, поэтому просто гасим непрозрачность. */
+.hero-ghost-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(135vw, 1100px);
+  max-width: none;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.14;
+  animation: ghost-breathe 9s ease-in-out infinite;
+}
+@keyframes ghost-breathe {
+  0%, 100% { opacity: 0.11; transform: translate(-50%, -50%) scale(1); }
+  50%      { opacity: 0.18; transform: translate(-50%, -50%) scale(1.03); }
+}
+
+/* === HERO: основной логотип со свечением === */
+.hero-logo {
+  display: block;
+  filter: drop-shadow(0 0 26px rgba(201, 169, 97, 0.30));
 }
 
 /* ============================================
@@ -280,7 +337,7 @@ section[id] { scroll-margin-top: 70px; }
 }
 
 /* Тонкая float-анимация у логотипа в hero */
-#hero img.logo-blend {
+#hero img.hero-logo {
   animation: float-soft 5s ease-in-out infinite;
 }
 @keyframes float-soft {

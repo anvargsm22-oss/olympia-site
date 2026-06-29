@@ -50,7 +50,7 @@
 <header id="top" class="fixed top-0 left-0 right-0 z-40 bg-olympia-dark/85 backdrop-blur border-b border-olympia-gold/20">
   <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
     <a href="#top" class="flex items-center gap-3">
-      <img src="images/logo/olympia-cyrillic-ornament.jpg" alt="Олимпия" class="logo-blend h-10 w-10 object-contain" />
+      <img src="images/logo/olympia-transparent.png" alt="Олимпия" class="h-10 w-10 object-contain" />
       <span class="font-serif text-xl text-olympia-gold tracking-wider">OLYMPIA</span>
     </a>
 
@@ -89,11 +89,14 @@
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
   <div class="absolute inset-0">
     <img src="images/photos/12-stretch-plastic.jpg" alt="" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-b from-olympia-dark/85 via-olympia-dark/75 to-olympia-dark"></div>
+    <div class="absolute inset-0 hero-overlay"></div>
   </div>
 
+  <!-- Призрачный увеличенный логотип-водяной знак позади контента -->
+  <img src="images/logo/olympia-transparent.png" alt="" aria-hidden="true" class="hero-ghost-logo" />
+
   <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
-    <img src="images/logo/olympia-cyrillic-ornament.jpg" alt="Логотип Олимпия" class="logo-blend mx-auto w-40 h-40 md:w-52 md:h-52 object-contain mb-6" />
+    <img src="images/logo/olympia-transparent.png" alt="Логотип Олимпия" class="hero-logo mx-auto w-40 h-40 md:w-52 md:h-52 object-contain mb-6" />
 
     <div class="meander-divider mx-auto mb-6"></div>
 
@@ -135,8 +138,11 @@
     <p class="text-base md:text-lg leading-relaxed text-olympia-cream/95 mb-3">
       «Олимпия» — это не обычный фитнес-клуб, а пространство для женщин, где одинаково важны и результат, и состояние.
     </p>
+    <p class="text-base md:text-lg leading-relaxed text-olympia-cream/95 mb-3">
+      Мы работаем через уникальные физические комплексы, особую технику дыхания и методику её выполнения — целостно над женским здоровьем, улучшением его качества, лёгкостью и гибкостью всего тела.
+    </p>
     <p class="text-base md:text-lg leading-relaxed text-olympia-cream/95">
-      Здесь мы работаем через дыхание, осанку и женскую энергию. Каждое направление продумано так, чтобы тело становилось сильнее, мягче и свободнее, а внутри рождалась тишина.
+      Каждое направление продумано так, чтобы тело становилось сильнее, мягче и свободнее, а внутри рождалась тишина.
     </p>
   </div>
 </section>
@@ -198,7 +204,7 @@
         <img src="images/photos/14-classic-stretch.jpg" alt="Классическая растяжка" loading="lazy" />
         <div class="program-card-body">
           <h4>Классическая растяжка</h4>
-          <p>Полчаса — верхняя часть тела: плечевой пояс, позвоночник, боковые линии. Полчаса — нижняя: поясница, ноги, связки. К финалу — работа над шпагатом.</p>
+          <p>Полчаса — верхняя часть тела: плечевой пояс, позвоночник, боковые линии. Полчаса — нижняя: поясница, ноги, связки. К финалу — работа над шпагатом. Улучшает гибкость и осанку, расслабляет мышцы и снижает риск травм.</p>
         </div>
       </article>
 
@@ -206,7 +212,7 @@
         <img src="images/photos/02-paired-stretch.jpg" alt="Растяжка в парах" loading="lazy" />
         <div class="program-card-body">
           <h4>Растяжка в парах</h4>
-          <p>Та же классическая растяжка, но через парное взаимодействие — глубокая проработка благодаря помощи партнёрши. Час занятия.</p>
+          <p>Та же классическая растяжка, но через парное взаимодействие — глубокая проработка благодаря помощи партнёрши. Атмосфера взаимной поддержки и мотивации. Час занятия.</p>
         </div>
       </article>
 
@@ -227,9 +233,9 @@
       </article>
 
       <article class="program-card">
-        <img src="images/photos/12-stretch-plastic.jpg" alt="Стрейчпластика" loading="lazy" />
+        <img src="images/photos/12-stretch-plastic.jpg" alt="Стрип-пластика" loading="lazy" />
         <div class="program-card-body">
-          <h4>Стрейчпластика</h4>
+          <h4>Стрип-пластика</h4>
           <p>Танцевальное направление. Связки в партере и стоя. Раскрытие женственности и уверенности в теле.</p>
         </div>
       </article>
@@ -242,7 +248,7 @@
         <img src="images/photos/17-stick-pose-clock.jpg" alt="Здоровая спина" loading="lazy" />
         <div class="program-card-body">
           <h4>Здоровая спина</h4>
-          <p>Комплекс на улучшение осанки: подвижность плечевых суставов, проработка всех сегментов позвоночника, работа с нижней частью тела.</p>
+          <p>Мягкие щадящие упражнения для оздоровления позвоночника: укрепление мышц спины, расслабление зажатых отделов, улучшение осанки. Подходит при грыжах, протрузиях, остеохондрозе и других заболеваниях позвоночника.</p>
         </div>
       </article>
 
@@ -250,7 +256,7 @@
         <img src="images/photos/18-art-glass-woman.jpg" alt="Женское здоровье" loading="lazy" />
         <div class="program-card-body">
           <h4>Женское здоровье</h4>
-          <p>Спокойное мягкое направление. Работа с мышцами тазового дна и брюшной полости, специальные техники дыхания.</p>
+          <p>Специализированные программы с учётом физиологии женского организма: улучшение функций мышц тазового дна, регулирование работы органов малого таза, послеродовое восстановление. Подходит каждой женщине.</p>
         </div>
       </article>
 
@@ -258,7 +264,7 @@
         <img src="images/photos/03-bridge-pose.jpg" alt="Фитнес для беременных" loading="lazy" />
         <div class="program-card-body">
           <h4>Фитнес для беременных</h4>
-          <p>Специальный комплекс для женщин в первом и втором триместре. Мягкие упражнения на тазовое дно, дыхательные техники.</p>
+          <p>Элементы йоги, пилатеса, растяжки и аэробики низкой интенсивности. Упражнения для укрепления мышц тазового дна и расслабления поясницы. Изучаем техники дыхания, которые помогут в схватках и потугах.</p>
         </div>
       </article>
 
@@ -266,7 +272,7 @@
         <img src="images/photos/14-classic-stretch.jpg" alt="Послеродовое восстановление" loading="lazy" />
         <div class="program-card-body">
           <h4>Послеродовое восстановление</h4>
-          <p>Авторские комплексы для восстановления женского здоровья после родов.</p>
+          <p>Авторские комплексы для восстановления женского здоровья после родов. Можно начинать через 6 недель после естественных родов без осложнений и через 6 месяцев после кесарева сечения.</p>
         </div>
       </article>
     </div>
@@ -298,7 +304,7 @@
         <img src="images/photos/15-latina-stage.jpg" alt="Латина" loading="lazy" />
         <div class="program-card-body">
           <h4>Латина</h4>
-          <p>Чувственный танец. Раскрывает грацию и женственную энергию.</p>
+          <p>Танец в быстром темпе для улучшения физической формы. Развивает координацию, гибкость и силу, повышает энергию, снимает стресс и помогает раскрыть индивидуальность.</p>
         </div>
       </article>
 
@@ -314,7 +320,7 @@
         <img src="images/photos/19-art-eastern-dance.jpg" alt="Восточный танец" loading="lazy" />
         <div class="program-card-body">
           <h4>Восточный танец</h4>
-          <p>Чувственное танцевальное направление. Раскрытие женской энергии, улучшение настроения.</p>
+          <p>Грациозное направление с пластичными движениями бёдер, живота и рук под восточные мотивы. Развивает гибкость, выносливость и координацию, дарит лёгкость и уверенность. Укрепляет мышцы малого таза — на пользу женскому здоровью.</p>
         </div>
       </article>
     </div>
@@ -389,8 +395,8 @@
           <tbody class="text-olympia-cream">
             <tr><td class="py-3">Пробное групповое занятие</td><td class="text-right font-semibold text-olympia-gold-light">300 ₽</td></tr>
             <tr><td class="py-3">Разовое групповое занятие</td><td class="text-right font-semibold">700 ₽</td></tr>
-            <tr><td class="py-3">Разовое персональное занятие</td><td class="text-right font-semibold">1 500 ₽</td></tr>
-            <tr><td class="py-3">8 персональных занятий</td><td class="text-right font-semibold">9 600 ₽</td></tr>
+            <tr><td class="py-3">Разовое персональное занятие</td><td class="text-right font-semibold">2 000 ₽</td></tr>
+            <tr><td class="py-3">8 персональных занятий</td><td class="text-right font-semibold">12 000 ₽</td></tr>
           </tbody>
         </table>
       </div>
@@ -419,7 +425,7 @@
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 reveal-stagger">
-      <button class="gallery-item" data-src="images/photos/12-stretch-plastic.jpg"><img src="images/photos/12-stretch-plastic.jpg" alt="Стрейчпластика" loading="lazy" /></button>
+      <button class="gallery-item" data-src="images/photos/12-stretch-plastic.jpg"><img src="images/photos/12-stretch-plastic.jpg" alt="Стрип-пластика" loading="lazy" /></button>
       <button class="gallery-item" data-src="images/photos/15-latina-stage.jpg"><img src="images/photos/15-latina-stage.jpg" alt="Латина — сцена" loading="lazy" /></button>
       <button class="gallery-item" data-src="images/photos/08-pole-dance.jpg"><img src="images/photos/08-pole-dance.jpg" alt="Pole Dance" loading="lazy" /></button>
       <button class="gallery-item" data-src="images/photos/01-couple-stretch-clock.jpg"><img src="images/photos/01-couple-stretch-clock.jpg" alt="Парная растяжка" loading="lazy" /></button>
@@ -488,7 +494,7 @@
 <footer class="bg-olympia-dark border-t border-olympia-gold/20 py-12">
   <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center md:items-start justify-between gap-8 text-center md:text-left">
     <div class="flex items-center gap-4">
-      <img src="images/logo/olympia-cyrillic-ornament.jpg" alt="Олимпия" class="logo-blend h-16 w-16 object-contain" />
+      <img src="images/logo/olympia-transparent.png" alt="Олимпия" class="h-16 w-16 object-contain" />
       <div>
         <p class="font-serif text-xl text-olympia-gold tracking-wider">OLYMPIA</p>
         <p class="text-olympia-cream/60 text-xs uppercase tracking-wider">студия развития тела</p>
