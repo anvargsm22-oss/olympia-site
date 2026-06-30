@@ -187,11 +187,7 @@ body { font-feature-settings: "kern", "liga"; }
 
   /* На телефоне призрачный лого крупнее по доле экрана и чуть заметнее,
      чтобы он действительно «виднелся в увеличенном виде». */
-  .hero-ghost-logo { width: 135vw; opacity: 0.18; }
-  @keyframes ghost-breathe {
-    0%, 100% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
-    50%      { opacity: 0.22; transform: translate(-50%, -50%) scale(1.03); }
-  }
+  .hero-ghost-logo { width: 135vw; opacity: 0.16; }
 
   /* Заголовок hero на узких экранах был великоват и упирался в края —
      уменьшаем кегль и страхуемся переносом, чтобы текст не вылезал за вьюпорт. */
@@ -237,12 +233,8 @@ section[id] { scroll-margin-top: 70px; }
   transform: translate(-50%, -50%);
   z-index: 1;
   pointer-events: none;
-  opacity: 0.14;
-  animation: ghost-breathe 9s ease-in-out infinite;
-}
-@keyframes ghost-breathe {
-  0%, 100% { opacity: 0.11; transform: translate(-50%, -50%) scale(1); }
-  50%      { opacity: 0.18; transform: translate(-50%, -50%) scale(1.03); }
+  opacity: 0.12;
+  /* Статичный водяной знак — без «дыхания», чтобы hero не мельтешил. */
 }
 
 /* === HERO: основной логотип со свечением === */
@@ -273,13 +265,9 @@ section[id] { scroll-margin-top: 70px; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Меандр — мягкое мерцание золотом */
+/* Меандр — статичное золото без мерцания, чтобы hero был спокойнее */
 .meander-divider {
-  animation: meander-glow 4s ease-in-out infinite;
-}
-@keyframes meander-glow {
-  0%, 100% { opacity: 0.7; }
-  50%      { opacity: 1; }
+  opacity: 0.9;
 }
 
 /* Fade-in при появлении в зоне видимости (через IntersectionObserver) */
@@ -326,24 +314,17 @@ section[id] { scroll-margin-top: 70px; }
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(201, 169, 97, 0.5);
-  animation: pulse-gold 2.5s ease-out infinite;
+  box-shadow: 0 0 0 0 rgba(201, 169, 97, 0.4);
+  animation: pulse-gold 4s ease-out infinite;
   pointer-events: none;
 }
 @keyframes pulse-gold {
-  0%   { box-shadow: 0 0 0 0 rgba(201, 169, 97, 0.45); }
-  70%  { box-shadow: 0 0 0 14px rgba(201, 169, 97, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(201, 169, 97, 0.35); }
+  70%  { box-shadow: 0 0 0 10px rgba(201, 169, 97, 0); }
   100% { box-shadow: 0 0 0 0 rgba(201, 169, 97, 0); }
 }
 
-/* Тонкая float-анимация у логотипа в hero */
-#hero img.hero-logo {
-  animation: float-soft 5s ease-in-out infinite;
-}
-@keyframes float-soft {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
-}
+/* Логотип в hero статичен — без парения, чтобы не добавлять лишнего движения. */
 
 /* Уважение к prefers-reduced-motion — критично для женщин 35+ с укачиванием */
 @media (prefers-reduced-motion: reduce) {
