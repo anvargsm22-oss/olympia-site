@@ -73,6 +73,19 @@ body { font-feature-settings: "kern", "liga"; }
   font-size: 1.05rem;
 }
 
+/* Двухстрочная надпись на кнопке.
+   Раньше «Записаться на пробное за 300 ₽» переносилось само и на узком
+   экране символ ₽ уезжал на отдельную строку. Теперь перенос задан явно:
+   «Записаться» / «на пробное за 300 ₽», а сам знак рубля привязан к сумме
+   неразрывным пробелом. */
+.btn-line {
+  display: block;
+  line-height: 1.3;
+}
+.btn-line + .btn-line {
+  margin-top: 0.15rem;
+}
+
 /* === Заголовки групп направлений === */
 .program-group {
   font-family: "Cormorant Garamond", serif;
@@ -109,12 +122,30 @@ body { font-feature-settings: "kern", "liga"; }
   border-color: rgba(201, 169, 97, 0.5);
   box-shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.5);
 }
+/* Картинка карточки.
+   Раньше стояла жёсткая высота 200px — при узких карточках получалась
+   полоска 1.7:1 и вертикальные кадры резались пополам (у моделей срезало
+   головы и стопы). Теперь пропорция 4:3 — она ближе к исходникам, поэтому
+   обрезка минимальна и карточки в ряду остаются одной высоты. */
 .program-card img {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
+
+/* Точка фокуса кадра.
+   object-fit: cover всегда что-то срезает — этими классами задаём, ЧТО
+   именно останется в кадре: у портретных снимков тянем кадр к голове,
+   у снимков со снарядом (степ-платформа, ролл) — к низу.
+   Селектор img.* нужен, чтобы правило было не слабее «.program-card img». */
+img.focus-top     { object-position: 50% 0%; }
+img.focus-upper   { object-position: 50% 20%; }
+img.focus-mid-up  { object-position: 50% 35%; }
+img.focus-lower   { object-position: 50% 80%; }
+img.focus-bottom  { object-position: 50% 100%; }
+/* Горизонтальный сдвиг — когда фигура смещена от центра кадра */
+img.focus-left    { object-position: 35% 50%; }
 .program-card-body {
   padding: 1.25rem 1.25rem 1.5rem;
   flex: 1;
@@ -146,6 +177,85 @@ body { font-feature-settings: "kern", "liga"; }
 .price-table table { border-collapse: collapse; }
 .price-table tbody tr { border-bottom: 1px solid rgba(201, 169, 97, 0.12); }
 .price-table tbody tr:last-child { border-bottom: none; }
+
+/* === Юридический документ (страница публичной оферты) ===
+   Отдельная типографика: длинный текст должен читаться, поэтому кегль
+   чуть мельче основного, а нумерация пунктов вынесена золотым цветом. */
+.legal-doc {
+  color: rgba(240, 230, 210, 0.88);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.legal-doc h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  color: var(--olympia-gold);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.25);
+}
+.legal-doc p { margin-bottom: 0.9rem; }
+.legal-doc p.sub { padding-left: 1.5rem; }
+.legal-doc .clause {
+  color: var(--olympia-gold-l);
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+.legal-doc a {
+  color: var(--olympia-gold-l);
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.legal-doc a:hover { color: var(--olympia-gold); }
+
+/* Врезка «что такое оферта» перед текстом договора */
+.legal-note {
+  background: rgba(26, 58, 46, 0.55);
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  line-height: 1.65;
+  color: rgba(240, 230, 210, 0.92);
+}
+.legal-note p { margin-bottom: 0.8rem; }
+.legal-note strong { color: var(--olympia-gold-l); }
+
+/* Таблица прайса внутри договора */
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+  min-width: 420px;
+}
+.legal-table th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  color: var(--olympia-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.35);
+}
+.legal-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.12);
+}
+.legal-table td:last-child { white-space: nowrap; font-weight: 600; }
+
+/* Реквизиты — две колонки на десктопе, одна на телефоне */
+.legal-req {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: 0.5rem 1.25rem;
+  margin-top: 1rem;
+}
+.legal-req dt { color: var(--olympia-gold); }
+.legal-req dd { margin: 0; }
+@media (max-width: 640px) {
+  .legal-req { grid-template-columns: 1fr; gap: 0.15rem; }
+  .legal-req dd { margin-bottom: 0.6rem; }
+}
 
 /* === Галерея === */
 .gallery-item {
@@ -181,7 +291,10 @@ body { font-feature-settings: "kern", "liga"; }
 /* === Адаптация === */
 @media (max-width: 640px) {
   .meander-divider { width: 180px; }
-  .program-card img { height: 180px; }
+  /* На телефоне карточка идёт в одну колонку и становится широкой —
+     кадр делаем ещё выше (5:4), иначе при большой ширине фото
+     превращается в узкую полосу и от фигуры остаётся середина. */
+  .program-card img { aspect-ratio: 5 / 4; }
   .price-table { padding: 1.25rem; }
   .price-table th, .price-table td { font-size: 0.9rem; }
 
